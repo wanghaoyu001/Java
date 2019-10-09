@@ -1,9 +1,10 @@
 package com.Model;
+
 //²Ö¿â
 public abstract class Warehouse {
-	private String name;//²Ö¿âÃû³Æ
-	private int userId;//ÓÃ»§±àºÅ
-	
+	private String name;// ²Ö¿âÃû³Æ
+	private int userId;// ÓÃ»§±àºÅ
+
 	public Warehouse(String name, int userId) {
 		super();
 		this.name = name;
@@ -25,5 +26,5 @@ public abstract class Warehouse {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	
+
 }
