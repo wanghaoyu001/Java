@@ -1,5 +1,6 @@
 package com.Controller;
 
+import com.Model.ColdWarehouse;
 import com.Model.RMWarehouse;
 
 public interface IWarehouseBiz {
@@ -17,5 +18,17 @@ public interface IWarehouseBiz {
 
 	// 初始化原料仓库
 	public RMWarehouse[] initializationRM();
+	
+	// 初始化冷藏仓库
+	public ColdWarehouse[] initializationCold();
+	
+	//输出原料仓库货物列表
+	public void RMOutput();
+	
+	//输出冷藏仓库货物列表
+	public void ColdOutput();
+	
+	//输出所有用户列表
+	public void userOutput();
 
 }

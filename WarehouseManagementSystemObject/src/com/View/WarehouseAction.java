@@ -13,6 +13,7 @@ public class WarehouseAction {
 		warehouse.initializationAdmin();// 初始化管理员信息
 		warehouse.initializationUser();// 初始化用户信息
 		warehouse.initializationRM();// 初始化原料仓库
+		warehouse.initializationCold();// 初始化冷藏仓库
 
 		Scanner input = new Scanner(System.in);
 		int choose = 0;// 标志位，为0持续循环，为1退出循环
@@ -45,12 +46,12 @@ public class WarehouseAction {
 						// 管理员操作
 						System.out.println("登录成功！");
 						System.out.print("欢迎  *");
-						warehouse.AdminShow(flag-1);
+						warehouse.AdminShow(flag - 1);
 						System.out.println("*  使用仓库管理系统");
 						int choose1 = 0;
 						do {
 							System.out.println("---------仓库管理---------");
-							System.out.println("1.货物管理");
+							System.out.println("1.仓库货物预览");
 							System.out.println("2.用户管理");
 							System.out.println("0.退出");
 
@@ -59,10 +60,20 @@ public class WarehouseAction {
 							case 1:
 								// 货物管理
 								System.out.println("-----货物管理-----");
-
+								// 原料仓库输出
+								System.out.println("-----------------原料仓库----------------");
+								System.out.println("编号\t所有者\t存入时间\t\t货物名称\t\t原材料产地\t原材料生产厂家");
+								warehouse.RMOutput();
+								// 冷藏仓库输出
+								System.out.println("-----------------冷藏仓库----------------");
+								System.out.println("编号\t所有者\t存入时间\t\t货物名称\t\t储存温度\t\t保质期");
+								warehouse.ColdOutput();
 								break;
 							case 2:
 								// 用户管理
+								System.out.println("-----------------用户管理----------------");
+								System.out.println("编号\t用户名\t账号\t密码");
+								warehouse.userOutput();
 								break;
 							case 0:
 								// 退出系统

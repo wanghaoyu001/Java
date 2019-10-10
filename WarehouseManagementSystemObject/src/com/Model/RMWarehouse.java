@@ -6,13 +6,13 @@ public class RMWarehouse extends Warehouse {
 	private String Address;// 原材料产地
 	private String Manufacturer;// 原材料生产厂家
 
-	public RMWarehouse(String name, int userId) {
-		super(name, userId);
+	public RMWarehouse(String name, int userId, String time) {
+		super(name, userId, time);
 
 	}
 
-	public RMWarehouse(String rMName, String address, String manufacturer, String name, int userId) {
-		super(name, userId);
+	public RMWarehouse(String name, int userId, String time, String rMName, String address, String manufacturer) {
+		super(name, userId, time);
 		RMName = rMName;// 原材料名称
 		Address = address;// 原材料产地
 		Manufacturer = manufacturer;// 原材料生产厂家
